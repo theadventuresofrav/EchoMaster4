@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoMasters: Ultrasound Physics Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Animations for Demos */
+      @keyframes sweep-3d {
+        from { transform: translateZ(-100px); opacity: 0.8; }
+        to { transform: translateZ(100px); opacity: 0; }
+      }
+       @keyframes line-scan {
+        0% { opacity: 0; transform: translateY(0); }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { opacity: 0; transform: translateY(135px); }
+      }
+      @keyframes beam-sweep {
+        from { transform: rotate(-40deg); }
+        to { transform: rotate(40deg); }
+      }
+      @keyframes pulse-anim {
+        0%, 100% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.05); opacity: 1; }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.22"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
